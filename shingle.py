@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 import time
+import getpath
 start = time.time()
 
 class ShingLing(object):
@@ -38,8 +39,6 @@ class ShingLing(object):
         com_count = self.com_count*2
         return com_count/float(total_length)
 
-text1 = str(open('E:\\python\\shingle\\test\\test1.txt','r').read())
-text2 = str(open('E:\\python\\shingle\\test\\test2.txt','r').read())
 
 s = ShingLing(text1,text2)
 end = time.time()
