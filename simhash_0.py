@@ -67,8 +67,11 @@ if __name__ == '__main__':
     rootdir = r'C:\\'
     dirlist = getpath.fileso().getpath(rootdir,['doc','txt'])
     res = []
+    # print dirlist
     for i in dirlist:
-        res.append([i,str(simhash(i.split()))])
+        with open(i,'r') as f:
+            content = f.read()
+        res.append([i,str(simhash(content))])
     res.sort(key = lambda a: a[1])
     print res[0:1000]
     with open(os.path.join(os.getcwd(),'result'+rootdir.split(':')[0]+'.txt'),'w') as f:
