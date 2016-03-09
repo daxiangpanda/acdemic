@@ -64,7 +64,7 @@ class simhash:
 
 if __name__ == '__main__':
     time.clock()
-    rootdir = r'C:\\'
+    rootdir = r'E:\\'
     dirlist = getpath.fileso().getpath(rootdir,['doc','txt'])
     res = []
     for i in dirlist:
